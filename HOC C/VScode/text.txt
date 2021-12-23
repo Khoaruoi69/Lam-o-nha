@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<conio.h>
+void nhapn (int &n)
+{
+	do{
+		printf("nhap so phan tu:"); scanf("%d",&n);
+		if(n<0||n>100)
+		printf("nhap sai nhap lai:");
+    }while(n<0||n>100);
+}
+void nhapmang(int a[], int n){
+	for(int i=0;i<n;i++){
+		printf("nhap a[%d]",i);
+		scanf("%d",&a[i]);
+	}
+}
+void xuatmang (int a[],int n){
+	for(int i=0;i<n;i++){
+		printf("%d \t", a[i]);
+	}
+}    
+int kiemtranguyento (int a[],int n){
+	int ktnt,i;
+	 {
+			if(a[i]<2) return 0;
+			if(a[i]==2) return 1;
+			if(a[i]%2==0) return 0;
+			else{
+				for(int i=2;i<n;i++){
+					if(a[i]%i==0){
+						return 0;
+					}
+					return 1;}
+					
+				}
+			}
+		}
+/*	}
+	/*for(int i=0;i<n;i++){
+		if( ktnt a[i]==1){
+	*/		
+/*}*/
+
+
+
+
+int main(){
+	int a[100],n;
+	nhapn(n);
+	nhapmang(a,n);
+	xuatmang(a,n);
+	kiemtranguyento(a,n);
+	printf("so nguyen to %d", 0);
+	return 0;
+}
